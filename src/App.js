@@ -1,18 +1,22 @@
 function App() {
-  const num1 = Math.ceil(Math.random() * 6);
-  const num2 = Math.ceil(Math.random() * 6);
+  const myStyle = {
+    color: "blue",
+    // background-color: "gold" // lowerCamelCase로 변경
+    backgroundColor: "gold",
+    fontSize: "70px",
+    textAlign: "center",
+  };
 
-  let messageClassName = "lose";
-  let msg = "다시 던져 보세요";
-  if (num1 === num2) {
-    messageClassName = "win";
-    msg = "당첨!!";
-  }
   return (
     <>
-      <h1>1번 주사위: {num1}</h1>
-      <h1>2번 주사위: {num2}</h1>
-      <h1 className={messageClassName}>{msg}</h1>
+      {/* style 속성은 객체로 주어야 함 */}
+      <div style={myStyle}>Lorem ipsum dolor.</div>
+      <hr />
+      <div
+        style={{ color: "blue", backgroundColor: "yellow", fontSize: "30px" }}
+      >
+        Lorem ipsum dolor.
+      </div>
     </>
   );
 }
