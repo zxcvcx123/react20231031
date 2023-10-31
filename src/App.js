@@ -1,14 +1,18 @@
 function App() {
-  // jsx가 js 코드로 변환됨
-  // 따라서 js 키워드를 사용할 수 없음
+  const num1 = Math.ceil(Math.random() * 6);
+  const num2 = Math.ceil(Math.random() * 6);
 
+  let messageClassName = "lose";
+  let msg = "다시 던져 보세요";
+  if (num1 === num2) {
+    messageClassName = "win";
+    msg = "당첨!!";
+  }
   return (
     <>
-      {/* class 속성은 className으로 작성 */}
-      <div className="header"></div>
-      {/* for 속성은 htmlFor로 작성 */}
-      <label htmlFor="nameInput">이름</label>
-      <input type="text" id="nameInput" />
+      <h1>1번 주사위: {num1}</h1>
+      <h1>2번 주사위: {num2}</h1>
+      <h1 className={messageClassName}>{msg}</h1>
     </>
   );
 }
