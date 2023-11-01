@@ -1,11 +1,15 @@
-import MyBox, { city, country, address } from "./component/MyBox";
-import MyElem, { address as myAddress, email } from "./component/MyElem";
+// 보통 css 파일
+// css module 사용
+// chakraui css library
+
+import { MyComp } from "./component/MyComp";
+import { MyBax } from "./component/MyBax";
 
 function App() {
   return (
     <>
-      <h1>{myAddress}</h1>
-      <h1>{address}</h1>
+      <MyComp />
+      <MyBax />
     </>
   );
 }
