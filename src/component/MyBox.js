@@ -1,11 +1,12 @@
 export function MyBox() {
-  return null;
+  return (
+    <div>
+      <h1>THIS IS MYBOX</h1>
+    </div>
+  );
 }
 
-export function MyElem() {
-  return null;
-}
+export const country = "korea";
+export const person = { name: "son", age: "33" };
 
-export let name = "손흥민";
-export const address = "신촌";
-export const person = { name: "강인", age: 22 };
+export default MyBox;
