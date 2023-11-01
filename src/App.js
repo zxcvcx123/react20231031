@@ -1,11 +1,9 @@
-import aaggee, { city } from "./component/MyElem";
-import MyBox, { country } from "./component/MyBox";
+import aaggee from "./component/MyElem";
 
 function App() {
   return (
     <>
-      <MyBox />
-      <h1>{country}</h1>
+      <h1>{aaggee}</h1>
     </>
   );
 }
