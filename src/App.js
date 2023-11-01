@@ -3,13 +3,14 @@
 // chakraui css library
 
 import { MyComp } from "./component/MyComp";
-import { MyBax } from "./component/MyBax";
+import { MyBox } from "./component/MyBox";
+import { MyContainer } from "./component/MyContainer";
 
 function App() {
   return (
     <>
-      <MyComp />
-      <MyBax />
+      <MyBox />
+      <MyContainer />
     </>
   );
 }
