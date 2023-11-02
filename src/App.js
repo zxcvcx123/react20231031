@@ -59,6 +59,50 @@ function App() {
             </Tbody>
           </Table>
         </Box>
+        <Box>
+          <Table variant="striped" colorScheme="blue" size={"lg"}>
+            <Thead>
+              <Tr>
+                <Th>Lorem.</Th>
+                <Th>Necessitatibus.</Th>
+                <Th>Atque?</Th>
+                <Th>Quidem.</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Laboriosam?</Td>
+                <Td>Quisquam?</Td>
+                <Td>Impedit.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Non!</Td>
+                <Td>Itaque?</Td>
+                <Td>Delectus.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Eum?</Td>
+                <Td>Esse.</Td>
+                <Td>Officia!</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Nam?</Td>
+                <Td>Quisquam?</Td>
+                <Td>Sit!</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Modi.</Td>
+                <Td>Error?</Td>
+                <Td>Velit.</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </Box>
       </SimpleGrid>
     </>
   );
