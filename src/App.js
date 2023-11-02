@@ -1,58 +1,21 @@
-import {
-  Box,
-  Center,
-  Checkbox,
-  CheckboxGroup,
-  Flex,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Input,
-  Radio,
-  RadioGroup,
-} from "@chakra-ui/react";
+import React from "react";
+import { Box, FormControl, Select } from "@chakra-ui/react";
 
-function App() {
+function App(props) {
   return (
-    <>
-      <Center>
-        <Box w={"480px"}>
-          <FormControl>
-            <FormLabel>이름</FormLabel>
-            <Input />
-            <FormHelperText>띄어쓰기 없이 입력하세요</FormHelperText>
-          </FormControl>
-        </Box>
-      </Center>
-      <Center mt={"2%"}>
-        <Box w={"480px"}>
-          <FormControl>
-            <FormLabel>하나만 선택</FormLabel>
-            <RadioGroup>
-              <Flex gap={5}>
-                <Radio value="value1">lorem.</Radio>
-                <Radio value="value2">lorem</Radio>
-                <Radio value="value3">lorem</Radio>
-                <Radio value="value4">lorem</Radio>
-              </Flex>
-            </RadioGroup>
-          </FormControl>
-        </Box>
-      </Center>
-      <Center>
-        <Box w={"480px"} mt={"1%"}>
-          <FormControl>
-            <CheckboxGroup>
-              <Flex gap={5}>
-                <Checkbox>lorem</Checkbox>
-                <Checkbox>ipsum</Checkbox>
-                <Checkbox>commodi</Checkbox>
-              </Flex>
-            </CheckboxGroup>
-          </FormControl>
-        </Box>
-      </Center>
-    </>
+    <div>
+      <Box w={"480px"}>
+        <FormControl>
+          <Select placeholder="선택하세요." multiple h={"120px"}>
+            <option value="value1">Lorem.</option>
+            <option value="value2">Excepturi.</option>
+            <option value="value3">Porro!</option>
+            <option value="value4">Placeat.</option>
+            <option value="value5">Praesentium.</option>
+          </Select>
+        </FormControl>
+      </Box>
+    </div>
   );
 }
 
