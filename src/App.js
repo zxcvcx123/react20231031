@@ -1,37 +1,52 @@
-import { Button, useToast } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
+import { ArrowRightIcon, EmailIcon } from "@chakra-ui/icons";
 
 function App() {
-  const toast = useToast();
-
   return (
     <>
-      <Button
-        onClick={() =>
-          toast({
-            title: "저장 완료",
-            description: "게시물이 저장되었습니다.",
-            duration: 1000,
-            position: "top",
-            isClosable: true,
-          })
-        }
-      >
-        토스트 띄우기
+      <Button colorScheme="blue">lorem.</Button>
+      <Button colorScheme="red">Lorem.</Button>
+      <Button colorScheme="yellow">Tempora?</Button>
+      <Button colorScheme="orange">Necessitatibus?</Button>
+      <Button colorScheme="gray" size={"sm"}>
+        Odit!
       </Button>
-      <Button
-        onClick={() =>
-          toast({
-            title: "저장 실패",
-            description: "게시물이 저장되지 않았습니다.",
-            duration: 1000,
-            position: "top",
-            isClosable: true,
-            status: "error",
-          })
-        }
-      >
-        토스트 띄우기
+      <Button colorScheme="purple" size={"xs"}>
+        Eveniet.
       </Button>
+      <Button colorScheme="messenger" size={"lg"}>
+        Iusto!
+      </Button>
+      <Button variant={"outline"} colorScheme="twitter">
+        Et.
+      </Button>
+      <Button colorScheme="telegram" variant={"ghost"}>
+        Ratione.
+      </Button>
+      <Button variant={"link"}>Non.</Button>
+      <Button variant={"unstyled"}>Facere?</Button>
+      <Button leftIcon={<EmailIcon />}>Reiciendis.</Button>
+      <Button rightIcon={<ArrowRightIcon />}>Maiores.</Button>
+      <Button isLoading loadingText={"전송중"}>
+        Excepturi.
+      </Button>
+      <Button>Perferendis.</Button>
+      <Button>Ipsa!</Button>
+      <Button>Id.</Button>
+      <Button>Eligendi?</Button>
+      <Button>Voluptate!</Button>
+      <Button>Quibusdam?</Button>
+      <Button>Aut!</Button>
+      <Button>Sed.</Button>
+      <Button>Explicabo.</Button>
+      <Button>Distinctio!</Button>
+      <Button>Non.</Button>
+      <Button>Dicta?</Button>
+      <Button>Blanditiis.</Button>
+      <Button>Nesciunt?</Button>
+      <Button>Nobis!</Button>
+      <Button>Quia?</Button>
+      <Button>Delectus.</Button>
     </>
   );
 }
