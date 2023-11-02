@@ -1,20 +1,46 @@
-import { Box, Center, Circle, Square } from "@chakra-ui/react";
-import { PhoneIcon, QuestionIcon } from "@chakra-ui/icons";
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  useDisclosure,
+} from "@chakra-ui/react";
 
 function App() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Center bg={"lightskyblue"} h={"200px"}>
-        <Square bg={"yellow.100"} w={"100px"} h={"100px"}>
-          lorem.
-        </Square>
-      </Center>
+      <Button onClick={onOpen}>모달 열기</Button>
 
-      <Center bg={"red"} h={"200px"}>
-        <Circle bg={"blue"} w={"100px"} h={"100px"}>
-          <QuestionIcon w={"50px"} h={"50px"} />
-        </Circle>
-      </Center>
+      <Modal
+        closeOnOverlayClick={false}
+        isCentered
+        motionPreset="slideInBottom"
+        isOpen={isOpen}
+        onClose={onClose}
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>모달의 제목</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+            doloremque exercitationem impedit laboriosam non nostrum, ratione.
+            Culpa explicabo fugiat fugit incidunt nesciunt nostrum quas quasi
+            quia, rerum soluta. Accusantium, beatae?
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" onClick={onClose}>
+              닫기
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 }
