@@ -1,109 +1,20 @@
-import {
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-  TableContainer,
-  SimpleGrid,
-  Box,
-} from "@chakra-ui/react";
+import { Box, Center, Circle, Square } from "@chakra-ui/react";
+import { PhoneIcon, QuestionIcon } from "@chakra-ui/icons";
+
 function App() {
   return (
     <>
-      <SimpleGrid columns={1} gap={5}>
-        <Box>
-          <Table>
-            <Thead>
-              <Tr>
-                <Th>Lorem.</Th>
-                <Th>Optio.</Th>
-                <Th>Minus.</Th>
-                <Th>Labore.</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Doloribus!</Td>
-                <Td>Magnam?</Td>
-                <Td>Tenetur?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Corporis.</Td>
-                <Td>Cumque.</Td>
-                <Td>Animi!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Nam.</Td>
-                <Td>Nam.</Td>
-                <Td>Modi!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Similique?</Td>
-                <Td>Quasi!</Td>
-                <Td>Provident!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Totam.</Td>
-                <Td>Adipisci?</Td>
-                <Td>Qui!</Td>
-              </Tr>
-            </Tbody>
-          </Table>
-        </Box>
-        <Box>
-          <Table variant="striped" colorScheme="blue" size={"lg"}>
-            <Thead>
-              <Tr>
-                <Th>Lorem.</Th>
-                <Th>Necessitatibus.</Th>
-                <Th>Atque?</Th>
-                <Th>Quidem.</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Laboriosam?</Td>
-                <Td>Quisquam?</Td>
-                <Td>Impedit.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Non!</Td>
-                <Td>Itaque?</Td>
-                <Td>Delectus.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Eum?</Td>
-                <Td>Esse.</Td>
-                <Td>Officia!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Nam?</Td>
-                <Td>Quisquam?</Td>
-                <Td>Sit!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Modi.</Td>
-                <Td>Error?</Td>
-                <Td>Velit.</Td>
-              </Tr>
-            </Tbody>
-          </Table>
-        </Box>
-      </SimpleGrid>
+      <Center bg={"lightskyblue"} h={"200px"}>
+        <Square bg={"yellow.100"} w={"100px"} h={"100px"}>
+          lorem.
+        </Square>
+      </Center>
+
+      <Center bg={"red"} h={"200px"}>
+        <Circle bg={"blue"} w={"100px"} h={"100px"}>
+          <QuestionIcon w={"50px"} h={"50px"} />
+        </Circle>
+      </Center>
     </>
   );
 }
