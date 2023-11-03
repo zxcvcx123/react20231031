@@ -1,23 +1,21 @@
 import React from "react";
 import { Button } from "@chakra-ui/react";
+import { logDOM } from "@testing-library/react";
 
-function MyComp({ someProp }) {
-  return (
-    <>
-      <div>
-        <Button onClick={someProp}>버튼</Button>
-      </div>
-    </>
-  );
+function MyComp({ children, excuteClick }) {
+  return <Button onClick={excuteClick}>{children}</Button>;
 }
-
 function App(props) {
   function func1() {
-    console.log("func1 실행됨");
+    console.log("func1 실행");
   }
+
   return (
     <div>
-      <MyComp someProp={func1}></MyComp>
+      <MyComp excuteClick={func1}>Button1</MyComp>
+      <MyComp excuteClick={() => console.log("화살표 함수 실행")}>
+        Button2
+      </MyComp>
     </div>
   );
 }
