@@ -16,6 +16,7 @@ function App(props) {
       <MyComp excuteClick={() => console.log("화살표 함수 실행")}>
         Button2
       </MyComp>
+      <MyComp excuteClick={() => alert("버튼 클릭")}>Button3</MyComp>
     </div>
   );
 }
