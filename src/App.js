@@ -1,20 +1,26 @@
 import React from "react";
-import { Button } from "@chakra-ui/react";
 
 function App(props) {
-  // 브라우저는 이벤트 핸들러 메소드에
-  // event 객체를 매개값으로 넣어줌
   function handleClick(e) {
-    console.log(e.target);
+    e.preventDefault();
+    console.log("다른 일을 시킴");
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("다른 일을 시킴");
   }
   return (
     <div>
-      <Button colorScheme="red" onClick={handleClick}>
-        button1
-      </Button>
-      <Button colorScheme="blue" onClick={handleClick}>
-        button2
-      </Button>
+      <a href="https://www.naver.com" onClick={handleClick}>
+        네이버
+      </a>
+      <div>
+        <form action="https://search.daum.net/search" onSubmit={handleSubmit}>
+          <input type="text" name="q" />
+          <button>검색</button>
+        </form>
+      </div>
     </div>
   );
 }
