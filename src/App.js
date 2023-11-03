@@ -2,26 +2,18 @@ import React from "react";
 import { Button } from "@chakra-ui/react";
 
 function App(props) {
-  // 함수명 작성 관습
-  // handle 이벤트명
-
-  function handleClick() {
-    console.log("second");
-  }
-
-  function handleMouseEnter() {
-    console.log("third");
-  }
-
-  function handleMouseLeave() {
-    console.log("4th");
+  // 브라우저는 이벤트 핸들러 메소드에
+  // event 객체를 매개값으로 넣어줌
+  function handleClick(e) {
+    console.log(e.target);
   }
   return (
     <div>
-      <Button onClick={() => console.log("first")}>버튼1</Button>
-      <Button onClick={handleClick}>버튼2</Button>
-      <Button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        버튼3
+      <Button colorScheme="red" onClick={handleClick}>
+        button1
+      </Button>
+      <Button colorScheme="blue" onClick={handleClick}>
+        button2
       </Button>
     </div>
   );
