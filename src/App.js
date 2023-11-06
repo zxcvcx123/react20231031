@@ -7,10 +7,10 @@ function App(props) {
 
   const [number, setNumber] = useState(0);
   const [numberObject, setNumberObject] = useState({ number: 0 });
+  const newNumberObj = { ...numberObject };
 
   function handleNumberObjChange() {
-    numberObject.number = numberObject.number + 1;
-    setNumberObject(numberObject);
+    setNumberObject(newNumberObj.number + 1);
   }
   return (
     <div>
