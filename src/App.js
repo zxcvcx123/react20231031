@@ -1,23 +1,18 @@
-import React from "react";
-import { Input } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Button } from "@chakra-ui/react";
 
 function App(props) {
-  let text = "";
-
-  function changeText(e) {
-    text = e.target.value;
-    console.log(text);
-  }
-
+  const [text, setText] = useState("hello");
   return (
     <div>
-      <input type="text" onChange={changeText} />
-
-      <div
-        style={{ backgroundColor: "yellow", width: "100px", height: "50px" }}
+      <Button
+        onClick={(e) => {
+          setText("상태 변경완료");
+        }}
       >
-        <p>{text}</p>
-      </div>
+        상태 변경!
+      </Button>
+      <p>{text}</p>
     </div>
   );
 }
